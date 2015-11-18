@@ -38,6 +38,8 @@ class CRP(object):
             '?method=%s&output=json&apikey=%s&%s' % \
             (func, CRP.apikey, urllib.urlencode(params))
 
+        print url
+
         try:
             response = requests.get(url)
             return response.json()['response']
@@ -104,4 +106,10 @@ class CRP(object):
         @staticmethod
         def get(**kwargs):
             results = CRP._apicall('congCmteIndus', kwargs)['committee']['member']
+            return results
+
+    class presCandContrib(object):
+        @staticmethod
+        def get(**kwargs):
+            results = CRP._apicall('presCandContrib', kwargs)
             return results
