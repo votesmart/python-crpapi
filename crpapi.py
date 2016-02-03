@@ -111,5 +111,17 @@ class CRP(object):
     class presCandContrib(object):
         @staticmethod
         def get(**kwargs):
-            results = CRP._apicall('presCandContrib', kwargs)
+            results = CRP._apicall('prescandContrib', kwargs)
+            return results
+
+    class presCandIndustry(object):
+        @staticmethod
+        def get(**kwargs):
+            results = CRP._apicall('prescandIndustry', kwargs)
+            return results
+
+    class presCandSector(object):
+        @staticmethod
+        def get(**kwargs):
+            results = CRP._apicall('prescandSector', kwargs)
             return results
