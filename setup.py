@@ -22,6 +22,6 @@ setup(name="python-crpapi",
                    "Programming Language :: Python",
                    "Topic :: Software Development :: Libraries :: Python Modules",
                    ],
-       install_requires=["simplejson >= 1.8"]
+       install_requires=["requests >= 2.9"]
       )
 
