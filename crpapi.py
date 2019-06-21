@@ -38,10 +38,11 @@ class CRP(object):
             '?method=%s&output=json&apikey=%s&%s' % \
             (func, CRP.apikey, urllib.urlencode(params))
 
-        print url
+        print(url)
 
         try:
-            response = requests.get(url)
+            headers = {'User-Agent': 'Votesmart.org'}
+            response = requests.get(url, headers=headers)
             return response.json()['response']
         except requests.HTTPError, e:
             raise CRPApiError(e.read())
