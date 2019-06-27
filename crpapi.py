@@ -44,9 +44,9 @@ class CRP(object):
             headers = {'User-Agent': 'Votesmart.org'}
             response = requests.get(url, headers=headers)
             return response.json()['response']
-        except requests.HTTPError, e:
+        except requests.HTTPError as e:
             raise CRPApiError(e.read())
-        except (ValueError, KeyError), e:
+        except (ValueError, KeyError) as e:
             raise CRPApiError('Invalid Response')
 
     class getLegislators(object):
