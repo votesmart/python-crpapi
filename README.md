@@ -9,6 +9,8 @@ Written by James Turk <jturk@sunlightfoundation.com>.
 All code is under a BSD-style license, see LICENSE for details.
 
 
+original repo: https://github.com/opensecrets/python-crpapi.git
+
 ##Requirements
 
 python >= 2.4
