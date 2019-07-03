@@ -36,7 +36,7 @@ class CRP(object):
 
         url = 'http://www.opensecrets.org/api/' \
             '?method=%s&output=json&apikey=%s&%s' % \
-            (func, CRP.apikey, urllib.urlencode(params))
+            (func, CRP.apikey, urllib.parse.urlencode(params))
 
         print(url)
 
