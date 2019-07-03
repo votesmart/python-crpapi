@@ -18,6 +18,11 @@ simplejson >= 1.8 (not required with python 2.6, will use built in json module)
 
 ##Installation
 
+To install via `pipenv`:
+
+`pipenv install -e git+https://github.com/votesmart/python-crpapi.git#egg=python-crpapi `
+
+
 To install run
 ```
     python setup.py install
